@@ -84,9 +84,9 @@ function updateCosts(employees) {
         totalCost += Number(prop.annualSalary);
         // console.log(totalCost);
         // console.log(employees);
-        totalCost = totalCost / 12
+        totalCost = Math.round((totalCost / 12) * 100) / 100
     }
-    $('#monthlyCosts').text(`Monthly costs: ${totalCost}`);
+    $('#monthlyCosts').text(`Monthly costs: $${totalCost}`);
 
     if (totalCost > 20000) {
         $('#monthlyCosts').css('background-color', 'red');
