@@ -24,7 +24,7 @@ In JS
 - [ ] calculate monthly costs
 - [ ] append to DOM
 - [ ] if monthly costs exceeds 20,000, add red background-color style to monthly cost
-- [ ] delete button to remove specific employee from DOM
+- [ ] delete button to remove specific employee from D  OM
 - [ ] update DOM with new monthly costs
 
 In CSS
