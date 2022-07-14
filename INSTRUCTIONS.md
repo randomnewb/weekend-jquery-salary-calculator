@@ -14,7 +14,6 @@ In HTML
 - [X] input fields
 - [X] submit button
 - [X] table
-- [ ] delete button
 
 In JS
 - [X] function to store information from input fields 
@@ -23,9 +22,9 @@ In JS
 - [X] clear input fields
 - [X] calculate monthly costs
 - [X] append to DOM
-- [ ] if monthly costs exceeds 20,000, add red background-color style to monthly cost
-- [ ] delete button to remove specific employee from DOM
-- [ ] update DOM with new monthly costs
+- [X] if monthly costs exceeds 20,000, add red background-color style to monthly cost
+- [X] delete button to remove specific employee from DOM
+- [X] update DOM with new monthly costs
 
 In CSS
 - [ ] styling for table elements
