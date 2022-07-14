@@ -59,4 +59,8 @@ function updateCosts(employees) {
         totalCost = totalCost / 12
     }
     $('#monthlyCosts').text(`Monthly costs: ${totalCost}`);
+
+    if (totalCost > 20000) {
+        $('#monthlyCosts').css('background-color', 'red');
+    } else $('#monthlyCosts').css('background-color', 'white');
 }
