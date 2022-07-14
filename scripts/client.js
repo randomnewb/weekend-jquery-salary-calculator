@@ -8,6 +8,9 @@ function readyNow() {
     $('#addEmployee').on('click',createEmployee);
 }
 
+
+let employeesArray = [];
+
 function createEmployee() {
     console.log('in createEmployee')
 
@@ -18,13 +21,12 @@ function createEmployee() {
         jobTitle: $('#jobTitle').val(), 
         annualSalary: $('#annualSalary').val(), 
     }
-
-
     
     console.log(newEmployee);
-
+    employeesArray.push(newEmployee);
     clearInputs();
     addEmployee(newEmployee);
+    updateCosts(employeesArray);
 }
 
 function addEmployee(employeeObject) {
@@ -45,4 +47,16 @@ function clearInputs() {
     $('#IDNumber').val('') 
     $('#jobTitle').val('') 
     $('#annualSalary').val('') 
+}
+
+function updateCosts(employees) {
+    let totalCost = 0;
+    for (let prop of employees) {
+        // console.log(prop.annualSalary);
+        totalCost += Number(prop.annualSalary);
+        // console.log(totalCost);
+        // console.log(employees);
+        totalCost = totalCost / 12
+    }
+    $('#monthlyCosts').text(`Monthly costs: ${totalCost}`);
 }

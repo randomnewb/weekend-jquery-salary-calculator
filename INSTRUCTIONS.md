@@ -21,10 +21,10 @@ In JS
 - [X] employee object with (first name, last name, ID number, job title, annual salary)
 - [X] append items to the DOM
 - [X] clear input fields
-- [ ] calculate monthly costs
-- [ ] append to DOM
+- [X] calculate monthly costs
+- [X] append to DOM
 - [ ] if monthly costs exceeds 20,000, add red background-color style to monthly cost
-- [ ] delete button to remove specific employee from D  OM
+- [ ] delete button to remove specific employee from DOM
 - [ ] update DOM with new monthly costs
 
 In CSS
@@ -34,6 +34,7 @@ In CSS
 
 Time spent: 
 - 7/13/22: 1 hour 30 minutes
+- 7/14/22: 20 minutes
 
 
 A 'Submit' button should collect the form information, store the information to calculate monthly costs, append information to the DOM and clear the input fields. Using the stored information, calculate monthly costs and append this to the to DOM. If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost.
