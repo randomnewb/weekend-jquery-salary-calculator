@@ -5,13 +5,24 @@ $(readyNow)
 function readyNow() {
     console.log('ready')
 
+    // Event handler for adding employee button
     $('#addEmployee').on('click',createEmployee);
+
+    // Event handler for removing a specific employee through event delegation
     $('body').on('click','.removeEmployee',removeEmployee);
 }
 
-
+// Create an empty array to store employee objects
 let employeesArray = [];
 
+
+/**
+ * Creates an employee object from input fields data
+ * Adds the employee object to an employees array
+ * Calls a function to clear inputs
+ * Calls a function to append the employee to the DOM
+ * Calls the function to update the monthly costs
+ */
 function createEmployee() {
     console.log('in createEmployee')
 
@@ -30,6 +41,11 @@ function createEmployee() {
     updateCosts(employeesArray);
 }
 
+/**
+ * Takes an employee object and appends its property values to a table on the DOM
+ * along with a removeEmployee button ('X')
+ * @param {object} employeeObject 
+ */
 function addEmployee(employeeObject) {
         $('#employeeTable').append(`
         <tr>
@@ -43,6 +59,9 @@ function addEmployee(employeeObject) {
         `)
     }
 
+/**
+ * Clears user input fields
+ */
 function clearInputs() {
     $('#firstName').val('')
     $('#lastName').val('') 
@@ -51,6 +70,13 @@ function clearInputs() {
     $('#annualSalary').val('') 
 }
 
+/**
+ * Uses the value(s) from an annualSalary property of an array of employee objects 
+ * in order to determine the monthly cost of all employee objects
+ * Updates the monthly cost on the DOM
+ * Styles the background-color conditionally
+ * @param {array} employees 
+ */
 function updateCosts(employees) {
     let totalCost = 0;
     for (let prop of employees) {
@@ -66,6 +92,12 @@ function updateCosts(employees) {
         $('#monthlyCosts').css('background-color', 'red');
     } else $('#monthlyCosts').css('background-color', 'white');
 }
+
+/**
+ * Finds the index of an element in the table and removes the matching index
+ * from the employee array
+ * Calls the updateCosts function 
+ */
 
 function removeEmployee() {
     // console.log('In removeEmployees')
