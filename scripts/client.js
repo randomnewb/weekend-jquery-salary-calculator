@@ -19,8 +19,11 @@ function createEmployee() {
         annualSalary: $('#annualSalary').val(), 
     }
 
+
+    
     console.log(newEmployee);
 
+    clearInputs();
     addEmployee(newEmployee);
 }
 
@@ -35,3 +38,11 @@ function addEmployee(employeeObject) {
         </tr>
         `)
     }
+
+function clearInputs() {
+    $('#firstName').val('')
+    $('#lastName').val('') 
+    $('#IDNumber').val('') 
+    $('#jobTitle').val('') 
+    $('#annualSalary').val('') 
+}

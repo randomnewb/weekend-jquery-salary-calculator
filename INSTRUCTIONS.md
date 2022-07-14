@@ -20,7 +20,7 @@ In JS
 - [X] function to store information from input fields 
 - [X] employee object with (first name, last name, ID number, job title, annual salary)
 - [X] append items to the DOM
-- [ ] clear input fields
+- [X] clear input fields
 - [ ] calculate monthly costs
 - [ ] append to DOM
 - [ ] if monthly costs exceeds 20,000, add red background-color style to monthly cost
