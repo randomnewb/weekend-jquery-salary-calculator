@@ -11,14 +11,14 @@ The application should have an input form that collects _employee first name, la
 
 In HTML
 - [X] HTML boilerplate
-- [ ] setup HTML elements
-- [ ] input fields
-- [ ] submit button
+- [X] input fields
+- [X] submit button
+- [X] table
 - [ ] delete button
 
 In JS
-- [ ] function to store information from input fields 
-- [ ] employee object with (first name, last name, ID number, job title, annual salary)
+- [X] function to store information from input fields 
+- [X] employee object with (first name, last name, ID number, job title, annual salary)
 - [ ] append items to the DOM
 - [ ] clear input fields
 - [ ] calculate monthly costs
