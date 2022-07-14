@@ -6,6 +6,7 @@ function readyNow() {
     console.log('ready')
 
     $('#addEmployee').on('click',createEmployee);
+    $('body').on('click','.removeEmployee',removeEmployee);
 }
 
 
@@ -37,6 +38,7 @@ function addEmployee(employeeObject) {
             <th>${employeeObject.IDNumber}</th>
             <th>${employeeObject.jobTitle}</th>
             <th>${employeeObject.annualSalary}</th>
+            <th><button class="removeEmployee">X</button></th>
         </tr>
         `)
     }
@@ -63,4 +65,13 @@ function updateCosts(employees) {
     if (totalCost > 20000) {
         $('#monthlyCosts').css('background-color', 'red');
     } else $('#monthlyCosts').css('background-color', 'white');
+}
+
+function removeEmployee() {
+    // console.log('In removeEmployees')
+    let childArrayIndex = $(this).parent().parent().index();
+    console.log(childArrayIndex);
+    $(this).parent().parent().remove();
+    employeesArray.splice((childArrayIndex - 1),1);
+    updateCosts(employeesArray);
 }
