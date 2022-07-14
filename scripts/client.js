@@ -5,11 +5,11 @@ $(readyNow)
 function readyNow() {
     console.log('ready')
 
-    $('#addEmployee').on('click',addEmployee);
+    $('#addEmployee').on('click',createEmployee);
 }
 
-function addEmployee() {
-    console.log('in AddEmployee')
+function createEmployee() {
+    console.log('in createEmployee')
 
     const newEmployee = {
         firstName: $('#firstName').val(),
@@ -20,4 +20,18 @@ function addEmployee() {
     }
 
     console.log(newEmployee);
+
+    addEmployee(newEmployee);
 }
+
+function addEmployee(employeeObject) {
+        $('#employeeTable').append(`
+        <tr>
+            <th>${employeeObject.firstName}</th>
+            <th>${employeeObject.lastName}</th>
+            <th>${employeeObject.IDNumber}</th>
+            <th>${employeeObject.jobTitle}</th>
+            <th>${employeeObject.annualSalary}</th>
+        </tr>
+        `)
+    }
